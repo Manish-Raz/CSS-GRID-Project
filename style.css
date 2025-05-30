@@ -70,9 +70,9 @@ body{
 }
     .new{
         position:absolute;
-        bottom:0;
+        bottom:10px;
         font-size:40px;
-        rotate:0deg;
+        rotate:0;
         left:30px;
     
 }
