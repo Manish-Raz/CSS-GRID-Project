@@ -70,10 +70,11 @@ body{
 }
     .new{
         position:absolute;
-        bottom:10px;
+        
         font-size:40px;
         rotate:0deg;
         left:30px;
+        top:700px;
     
 }
 
