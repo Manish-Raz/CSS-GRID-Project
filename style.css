@@ -68,6 +68,12 @@ body{
     grid-gap: 5px;
 
 }
+    .new{
+        position:absolute;
+        bottom:0;
+        font-size:40px;
+        rotate:0deg;
+        left:30px;
     
 }
 
