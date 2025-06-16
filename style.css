@@ -1,11 +1,14 @@
 body{
-    height: 700px;
-    width: 600px;
+    max-width: 600px;
     margin: 30px auto;
    display: grid;
    grid-template-columns:1fr 1fr 1fr ;
-    grid-template-rows:1fr 1fr 1fr 1fr;
+     grid-template-rows: repeat(4, 150px); /*  we need tp fixed row height to maintain grid shape */
     grid-gap: 10px;
+   background: linear-gradient(135deg, #000000, #0f152c);
+   position: relative;
+   overflow-x: hidden;
+
 }
 .pic{
     background-color:antiquewhite;
@@ -29,14 +32,25 @@ body{
     background-color: rgb(0, 196, 140);
     grid-row: 1/3;
 }
-.new{
+
+/* This is for showing ANIME FAN in big sideways letters with amazing color style */
+.new {
     position: absolute;
-    right: 20px;
-    font-size: 200px;
+    left: 390px;
+    font-size: 185px;
     font-family: "Bebas Neue", sans-serif;
-    rotate: 90deg;
-    top:230px;
-} 
+    transform: rotate(90deg);   /* Correct way to rotate */
+    top: 200px;
+    letter-spacing: 0.03em;
+    font-weight: 900;
+    background: linear-gradient(to bottom, rgba(251, 251, 251, 0.35) 30%, rgba(234, 5, 5, 0) 76%);
+    white-space: nowrap;
+    pointer-events: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 10;
+}
 
 .pic.pic2{
     background-color: rgb(234, 211, 5);
@@ -59,24 +73,25 @@ body{
 @media (max-width:600px){
     
 body{
-    height:500px;
-    width:300px;
+    width:95%;
      margin: 15px auto;
    display: grid;
    grid-template-columns:1fr 1fr 1fr ;
-    grid-template-rows:1fr 1fr 1fr 1fr;
+     grid-template-rows: repeat(6, 120px);
     grid-gap: 5px;
 
 }
     .new{
         position:absolute;
         
-        font-size:40px;
+        font-size:50px;
         rotate:0deg;
-        left:30px;
-        top:520px;
+        left:20px;
+        top:650px;
+        transform: rotate(0deg);
     
 }
+}        /* Minor fix: added missing bracket to avoid CSS parsing error  */
 
 .pic.pic6{
     background-color: rgb(0, 196, 140);
